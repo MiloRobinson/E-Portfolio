@@ -66,7 +66,6 @@
 				Cache Memory is very fast access memory used to store instruction and data that the CPU will need very soon, any data not being used frequently will be replaced with newer data that is more frequently used.<br /><br />
 				Secondary Storage is where all applications and programs none essential to the running of the computer are stored, everything from the OS, to anti-virus, to games.<br /><br />
 				The purpose of secondary storage is so that the user can save data and turn off the computer without losing all of the work they have done that day. This means that when for example you play a game the next day you can pick up where you left and continue your progress.<br /><br /></p>
-		<h3 
 	</div>
 </div>
 
@@ -86,21 +85,10 @@ function myFunction() {
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
+            li[i].style.display = "";}
+		else {
             li[i].style.display = "none";
         }
     }
 }
-
-var  mn = $("#navbar");
-    mns = "main-nav-scrolled";
-
-$(window).scroll(function() {
-  if( $(this).scrollTop() > 108 ) {
-    mn.addClass(mns);
-  } else {
-    mn.removeClass(mns);
-  }
-});
 </script>
