@@ -1,0 +1,78 @@
+<html>
+<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title> A Level Computing </title>
+<body>
+
+<div class="title">
+	<h1> A Level Computing Theory </h1><br/>
+</div>
+<a href="index.html">Home</a>
+
+<div class="container clearfix">
+	<div class="general" id="navbar" style="width:20%;">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Chapters..">
+		<ul id="myUL">
+			<li><a href="ALevelChapter1.html" class="header">Chapter 1</a></li>
+			<li><a href="Chapter 2.html" class="header">Chapter 2</a></li>
+			<li><a href="Chapter 3.html" class="header">Chapter 3</a></li>
+			<li><a href="Chapter 4.html" class="header">Chapter 4</a></li>
+			<li><a href="Chapter 5.html" class="header">Chapter 5</a></li>
+			<li><a href="Chapter 6.html" class="header">Chapter 6</a></li>
+			<li><a href="Chapter 7.html" class="header">Chapter 7</a></li>
+			<li><a href="Chapter 8.html" class="header">Chapter 8</a></li>
+			<li><a href="Chapter 9.html" class="header">Chapter 9</a></li>
+			<li><a href="Chapter 10.html" class="header">Chapter 10</a></li>
+			<li><a href="Chapter 11.html" class="header">Chapter 11</a></li>
+			<li><a href="#ToD">Types of Data</a></li>
+			<li><a href="#RD">Representing Data</a></li>
+			<li><a href="Chapter 12.html" class="header">Chapter 12</a></li>
+			<li><a href="Chapter 13.html" class="header">Chapter 13</a></li>
+		</ul>
+	</div>
+	<div class="general" style="width:75%;">
+		<h2>Data Types</h2>
+		<h3 id="ToD">Types of data</h3>
+			<p> Data can take multiple different forms on a computer, this is because different types of data need to behave differently for example you couldn't add two words together as they aren't numbers and so they are stored differently to numbers.<br />
+				Eg: "Four" is a string(text), "-4" is an integer(whole number), "4.7" is a float(decimal number), "True" is boolean(true/false - 1/0).<br /><br /></p>
+		<h3 id="RD">Representing data</h3>
+			<p> Computers store everything in binary and thus every regular symbol you could want to display is stored in a big table on your computer. This table was originally made by a group of american computer developers. The original table had 128 characters and each had their own 7 bit binary number.<br /><br />
+				This was then extended to 8 bits so that 256 characters could be stored. This table was called the ASCII(American Standard Character Information Interchange) table. The reason this table was developed is so that all computers no matter who built them if they had this same table with each character stored as the same number then an "a" on 1 computer would also be an "a" on another computer. This is useful because it allows communication between computers and without it a sentence on one computer would be an unreadable mess on another computer.<br /><br />
+				Next came along UNICODE, at first 16 bits for each number meaning 65535 characters. This was then extended to have no upper limit of characters using a system called pages. UNICODE contains many languages from around the world even including emoji's invented in Japan by a man named Shigetaka Kurita in 1998.<br /><br />
+				Below is a sample from the ASCII 8 bit table showing 0-9 and the upper/lower case alphabets:<br /></p>
+				<img src="Images/ascii-table.jpg" style="width:50%; margin:15px;">	
+		<h3 id="SN">Storing Numbers</h3>
+			<p> Positive integers are fairly easy to store, any number up to 255 can be stored using 8 bits of binary. This is very different to the way we use numbers normally, we use the denary system normally eg: 1,10,100 etc. However in a computer binary is used. To store a number in binary you can use 1 of two methods.<br /><br />
+				The first method:<br />
+				Divide the number by two repeatedly using the remainders as the binary. eg:163<br />
+				163 / 2 = 81 with 1 remainder<br />81 / 2 = 40 with 1 remainder<br />40 / 2 = 20 with 0 remainder<br />20 / 2 = 10 with 0 remainder<br />10 / 2 = 5 with 0 remainder<br />5 / 2 = 2 with 1 remainder<br />2 / 2 = 1 with 0  remainder<br />1 / 2 = 0 with 1 remainder<br /> 
+				This would leave the binary number to be: 11000101<br /><br />
+				The second method:<br />
+				Using the table below input the binary number then add up all the values with a 1 underneath<br />
+				<img src="Images/Binary Table.jpg" style="width:50%; margin:15px;">	</p>
+	</div>
+</div>
+
+</body>
+</html>
+
+<script>
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
