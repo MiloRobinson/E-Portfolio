@@ -25,14 +25,20 @@
 			<li><a href="Chapter 10.html" class="header">Chapter 10</a></li>
 			<li><a href="Chapter 11.html" class="header">Chapter 11</a></li>
 			<li><a href="Chapter 12.html" class="header">Chapter 12</a></li>
-			<li><a href="#"></a></li>
-			<li><a href="#"></a></li>
+			<li><a href="#ASPI">Adding and Subtracting Positive Integers</a></li>
+			<li><a href="#D">Decimal Numbers In Binary</a></li>
 			<li><a href="#"></a></li>
 			<li><a href="Chapter 13.html" class="header">Chapter 13</a></li>
 		</ul>
 	</div>
 	<div class="general" style="width:75%;">
-		<h2></h2>
+		<h2>Computer Arithmetic</h2>
+		<h3 id="ASPI">Adding and Subtracting Positive Integers</h3>
+			<p> Adding : To add two binary numbers we use a similar process to when we add numbers in binary, we align the number columns correctly and then go column by column from right to left adding them up. So 1+0=0 and if we get 1+1=2 which we cant do in binary, its like getting 9+2=11 in denary so we carry the excess over to the next column so we get 1+1=0 carry 1. If we carry over a 1 into a column that isn't there yet as we're limited to a certain number of bits then that means the number is too big to store in that many bits and would need more bits to be stored. This is called an overflow error.<br /><br />
+				Subtracting : To take two numbers away from each other we again use a similar process to denary, we subtract the columns so 1-1=0, 1-0=1 but then 0-1=-1? when this happens like in denary we 'borrow' 1 from the next column. As 10 in binary is 2 we then add 2 to the column we're borrowing into, this may lead to you having to borrow from multiple columns as there are fewer amounts you can borrow from a column than in denary.<br /><br /></p>
+		<h3 id="D">Decimal Numbers In Binary</h3>
+			<p> There are two main methods of storing decimal binary numbers, the first is fixed point and the second floating point. In fixed point the decimal point goes inbetween the 1 and the 1/2 in the same way as in denary it goes between 1 and 1/10, the issue with this is that you can only be accurate to whatever the last fraction column heading is so with 2bits after the decimal place you ca only be accurate to the nearest 1/4(0.25) which would be rubbish for storing money values etc.<br /><br />
+				Floating point is a little more difficult, for floating point numbers you first have to </p>
 		<h3 id=""></h3>
 			<p> </p>
 	</div>

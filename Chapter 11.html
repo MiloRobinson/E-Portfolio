@@ -26,6 +26,10 @@
 			<li><a href="Chapter 11.html" class="header">Chapter 11</a></li>
 			<li><a href="#ToD">Types of Data</a></li>
 			<li><a href="#RD">Representing Data</a></li>
+			<li><a href="#SN">Storing Numbers</a></li>
+			<li><a href="#IS">Images and Sound</a></li>
+			<li><a href="#RI">Representing Instructions</a></li>
+			<li><a href="#EQ">Example Questions</a></li>
 			<li><a href="Chapter 12.html" class="header">Chapter 12</a></li>
 			<li><a href="Chapter 13.html" class="header">Chapter 13</a></li>
 		</ul>
@@ -49,7 +53,52 @@
 				This would leave the binary number to be: 11000101<br /><br />
 				The second method:<br />
 				Using the table below input the binary number then add up all the values with a 1 underneath<br />
-				<img src="Images/Binary Table.jpg" style="width:50%; margin:15px;">	</p>
+				<img src="Images/Binary Table.jpg" style="width:50%; margin:15px;"><br />	
+				Negative integers are slightly different to positive ones, you can use the 2nd method from above but you have to edit the table ever to slightly. There are two different changes you can make to the headings.<br /><br />
+				The first is called the Sign and Magnitude method as the first column tells you whether the number is positive or negative.<br />
+				<img src="Images/SignAndMagnitude Table.jpg" style="width:50%; margin:15px;"><br />
+				The second is called two's complement, it is a more effective method than sign and magnitude as it requires less processing to convert between denary and binary as they are all the same data type.<br />
+				<img src="Images/TwosComplement Table.jpg" style="width:50%; margin:15px;"><br /><br />
+				Now after Binary we will cover Hexidecimal, this is a base 16 number system so you can have 0-9 then A-F for numbers 10-15. To convert between denary and hex we use the same system as we did for binary and divide the number by the base(16) using the remainders as values for our hex number or you can use the this table:<br />
+				<img src="Images/HextoDenary Table.jpg" style="width:50%; margin:15px;"><br />
+				The reason hexidecimal exists is to make binary numbers much easier to read by humans, as long strings of 1's and 0's can become very hard to distinguish between. To convert between hexidecimal and binary you simply break the binary number up into nibbles (4bits) and use the table below converting each nibble to a single hex digit.<br />
+				<img src="Images/HextoBinary Table.jpg" style="width:50%; margin:15px;"><br /></p>
+		<h3 id="IS">Images and Sound</h3>
+			<p> There are two main ways of storing images, by using vectors or by using a bitmap. In bit map we have a big grid with each square being a pixel and in each square a binary number representing the colour of that pixel. The size of this number changes how many different colour options we can have, if we have 16bits per pixel we can use 2^16 (65536) different colours.<br /><br />
+				The second method is to plot simple vector shapes/graphs with equations that fill in the different sections of the image, this method can be much more efficient as less information has to be stored however it cannot be compressed as losing any information would ruin the image whereas a bitmap image can be compressed by reducing the resolution(number of pixels per unit area) or colour depth(number of bits used to store each pixel).<br /><br />
+				A long with the image itself something called metadata(data about data) is stored, this information contains things such as the resolution, the dimensions of the image, also on phone cameras information such as location of image taken can also be stored using gps.<br /><br />
+				Next up is sound, sound used to be stored using analog vinyl records but for a long time now we've been using digital recordings of sound. This digital recording is a trade off as even though there is no static and less faults in the recording the way we record the sound waves means that the digital version isn't true to the analog wave and has lower sound quality.<br /><br />
+				The way we record sound is by taking samples of the wave at regular intervals and then recreating the sound as best we can by playing all the different sample levels one after another, as a drawing it looks like this:<br />
+				<img src="Images/Sound wave.jpg" style="width:50%; margin:15px;"><br />
+				As you can see from the image above there are gaps between the samples and the wave, the more samples we take the smaller these gaps are. The rate at which we take these samples is called the sample rate, a high sample rate improves the quality of the sound. The number of bits we use to record the 'tone' at each sample is called the bit rate, similarly to images if we have 16bits per sample we can use 2^16 different tones. Typical bitrates for sound are between 100-300 thousand bits per second.</p>
+		<h3 id="RI">Representing Instructions</h3>
+			<p> An instruction is made of two parts, the operator and the operand both are stored together as one binary number/pattern. The operator tells the computer what process is being performed, eg: add a number to the accumulator. The operand can either be the number being used in a calculation or it can be the memory of the address of the number to be used. The computer has no way of distiguishing between instructions and data so programs must have proper allocation of data/instructions so that whne the computer looks in a memory location and assumes it is a certain type of information (data/instruction) it doesnt cause an error or do the wrong calculation.
+				</p>
+		<h3 id="EQ">Example Questions</h3>
+			<p> Convert from Denary to Binary:<br />
+				49 = 00110001<br />
+				131 = 10000011<br />
+				127 = 01111111<br />
+				255 = 11111111<br />
+				203 = 11001011<br />
+				Convert Binary to Denary:<br />
+				10111001 = 185<br />
+				00010001 = 17<br />
+				11011111 = 223<br />
+				00000000 = 0<br /><br />
+				Convert from Hexidecimal to Denary:<br />
+				12  = 18<br />
+				FF  = 255<br />
+				3D  = 61<br />
+				2BE = 702<br />
+				AB5 =  2741<br />
+				Convert from Hexidecimal to Binary<br />
+				92   = 146
+				5C   = 92
+				FB   = 251
+				ABCD = 43981
+				FFFF =65535
+				</p>
 	</div>
 </div>
 
