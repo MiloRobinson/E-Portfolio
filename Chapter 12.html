@@ -28,7 +28,8 @@
 			<li><a href="#ASPI">Adding and Subtracting Positive Integers</a></li>
 			<li><a href="#ASTC">Adding and Subtracting In Two's Compliment</a></li>
 			<li><a href="#D">Decimal Numbers In Binary</a></li>
-			<li><a href="#N">Normalisatio</a></li>
+			<li><a href="#N">Normalisation</a></li>
+			<li><a href="#BM">Bitwise Manipulation</a></li>
 			<li><a href="#EQ">Example Questions</a></li>
 			<li><a href="Chapter 13.html" class="header">Chapter 13</a></li>
 		</ul>
@@ -45,7 +46,11 @@
 			<p> Adding : Adding two two's compliment numbers is the same process as in normal binary however when the number overflows the output results as a negative number so you'd need an extra bit to store numbers larger than 127.<br /><br />
 				Subtracting : For subtraction first use one's compliment (all 1's become 0's and vice versa then add 1) on the number that will be subtracted, then simply add the two numberrs.</p>
 		<h3 id="N">Normalisation</h3>
-			<p> For positive sign and magnitude numbers take your number and move the binary point over so that it is situated in front of the frist 1, then simply change the exponent accordingly. So if you moved the binary point three places to the right and the exponenent was originally 5 then minus three and make the exponent 2. For negative sign and magnitude move the binary point to the first 0 then save as with positive, adjust the exponent to match.</p>
+			<p> For positive sign and magnitude numbers take your number and move the binary point over so that it is situated in front of the frist 1, then simply change the exponent accordingly. So if you moved the binary point three places to the right and the exponenent was originally 5 then minus three and make the exponent 2. For negative sign and magnitude move the binary point to the first 0 then save as with positive, adjust the exponent to match.<br /><br />
+				Two's Compliment works in the exact same way, you just have to remember to use 1's compliment and add 1 so its a negative twos compliment number then follow the same process as with Sign and magnitude except you remove leading 1's not leading 0's.</p>
+		<h3 id="BM">Bitwise Manipulation</h3>
+			<p> There are two main operations you can perform on binary numbers,  the first is shifting. To shift a number you move all the bits in a direction, so a shift right of three on 11010000 goes to 00011010. The second number will be 2^3 times smaller than the first number as you divide by 2 for each shift right and multiply by two for each shift left.<br /><br />
+				The second is masking, using logic gates and a mask(a set binary number) you can manipulate binary values however you like. Say you had the number 1101 and 0110 as your mask then applied an and gate to the two you'd get (0+1=0 1+0=0 1+1=1 0+1=0) 0100.</p>
 		<h3 id="EQ">Example Questions</h3>
 			<p> Binary Additions/Substractions<br />
 				10100110 + 00110011 = 11011001<br />
