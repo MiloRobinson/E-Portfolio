@@ -1,0 +1,80 @@
+<html>
+<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title> A Level Computing </title>
+<body>
+
+<div class="title">
+	<h1> A Level Computing Theory </h1><br/>
+</div>
+<a href="index.html">Home</a>
+
+<div class="container clearfix">
+	<div class="general" id="navbar" style="width:20%;">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Chapters..">
+		<ul id="myUL">
+			<li><a href="ALevelChapter1.html" class="header">Chapter 1</a></li>
+			<li><a href="Chapter 2.html" class="header">Chapter 2</a></li>
+			<li><a href="Chapter 3.html" class="header">Chapter 3</a></li>
+			<li><a href="Chapter 4.html" class="header">Chapter 4</a></li>
+			<li><a href="Chapter 5.html" class="header">Chapter 5</a></li>
+			<li><a href="Chapter 6.html" class="header">Chapter 6</a></li>
+			<li><a href="Chapter 7.html" class="header">Chapter 7</a></li>
+			<li><a href="Chapter 8.html" class="header">Chapter 8</a></li>
+			<li><a href="Chapter 9.html" class="header">Chapter 9</a></li>
+			<li><a href="Chapter 10.html" class="header">Chapter 10</a></li>
+			<li><a href="Chapter 11.html" class="header">Chapter 11</a></li>
+			<li><a href="Chapter 12.html" class="header">Chapter 12</a></li>
+			<li><a href="Chapter 13.html" class="header">Chapter 13</a></li>
+			<li><a href="Chapter 14.html" class="header">Chapter 14</a></li>
+			<li><a href="#H">History</a></li>
+			<li><a href="#CT">Computer Transmission</a></li>
+			<li><a href="#N">Networks</a></li>
+			<li><a href="#H">Hardware</a></li>
+			<li><a href="#"></a></li>
+			<li><a href="Chapter 15.html" class="header">Chapter 15</a></li>
+			<li><a href="Chapter 16.html" class="header">Chapter 16</a></li>
+			<li><a href="Chapter 17.html" class="header">Chapter 17</a></li>
+			<li><a href="Chapter 18.html" class="header">Chapter 18</a></li>
+			<li><a href="Chapter 19.html" class="header">Chapter 19</a></li>
+			<li><a href="Chapter 20.html" class="header">Chapter 20</a></li>
+		</ul>
+	</div>
+	<div class="general" style="width:75%;">
+		<h2>Data Transmission</h2>
+		<h3 id="H">History</h3>
+			<p>Early methods of communication included smoke signals, load drums, horns etc and these were good for simple messages eg: enemy approaching but for anything more complex they were useless. Long distance communication is a vital part of todays modern world and digital communication is a huge improvement over any alternatives. Travelling in person to deliver a message is both expensive and time consuming, analog phone calls were susceptible to static and errors in voltages etc and often were so unclear words were inaudible. So the invention of electricity and digital communication are huge developments.<br /><br /></p>
+		<h3 id="CT">Computer Transmission</h3>
+			<p>There are several reason for the development of computer transmission including business and social reason and with computers all over the world for them to be able to talk to each other and this is where standards come in. Computers follow standards so that other computers interpret data in the same way that they do allowing messages to be transferred. Examples of standards are ASCII/UNICODE which contain the character sets that computers use, HTML for web development.<br /><br /></p>
+		<h3 id="N">Networks</h3>
+			<p>A network is a collection of devices(nodes) connected together either with cables or wirelessly, they allow for transferal of data between devices. Reasons to have a network include being able to have a central store of data, eg. a server, being able to share data between computers, sharing peripherals such as a printer. and so on. Having a private network allows for complete control over security and the software/data people have access to however they are often heavily relied upon so if they stop working the cost to a business can be massive. To reduce this risk redundancy(duplication of important components) is often built into the system as well as having regular backups of the systems data and a disaster recovery plan so that the business can limit the effect of a network failing.<br /><br /></p>
+		<h3 id="H">Hardware</h3>
+			<p>Network Interface Card(NIC) allows for wired connections between computers (usually Ethernet Cables). Ethernet cables carry data between devices in frames where each frame contains source, destination, data/message and error checking, the source and destination are given as MAC addresses. MAC addresses are a unique 48 bit identifier given to each new device by manufacturer usually displayed as a hexidecimal value. First 24 bits identify the manufacturer the 2nd 24 bits are assigned by the manufacturer where each manufacturer has their own system of allocation<br /><br /></p>
+		<h3 id=""></h3>
+			<p><br /><br /></p>
+	</div>
+</div>
+
+</body>
+</html>
+
+<script>
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
